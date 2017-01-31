@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	
+</head>
+<body>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+		<!-- //This is the file served up first.
+		//Client is browser(index.html). Server is index.js. Server doesn't run index.html, it just gives it to the browser.
+		//Use sockets when you want real-time stuff to happen -->
+	<div class="container">
+		<h1>Hi</h1>
+
+		<div>
+			<h3>Enter your message here</h3>
+			<form onsubmit="sendChatMessage()">
+				<input type="text" id="chat-message" />
+				<input class="btn btn-primary" value="Send!" />
+			</form>
+		</div>
+
+		<div class="col-sm-3" id="userName">
+			<!-- Our usernames will go here as they show up. -->
+		</div>
+
+		<div class="col-sm-6" id="userChats">
+			<!-- All chats go here as they show up -->
+		</div>
+
+		<div class="tol-bar col-sm-12">
+			<input type="color" id="color-picker" />
+			<label>Choose your marker thickness</label>
+			<input type="number" id="thickness" placeholder=10 />
+		</div>
+
+		<div class="col-sm-12">
+			<canvas id="canvas" width="500px" height="500px"></canvas>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.js"></script>
+	
+	<script type="text/javascript" src="scripts.js"></script>
+
+</body>
+</html>
